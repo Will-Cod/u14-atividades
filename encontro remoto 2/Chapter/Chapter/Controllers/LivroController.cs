@@ -66,5 +66,33 @@ namespace Chapter.Controllers
                 throw;
             }
         }
+        //Rota para atualizar um item na tabela
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Livro livro)
+        {
+            try
+            {
+                _livroRepository.Atualizar(id, livro);
+                return StatusCode(204);
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
+        [HttpDelete("{id}")] //Rota para deletar um item
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                _livroRepository.Deletar(id);
+                return StatusCode(204);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
