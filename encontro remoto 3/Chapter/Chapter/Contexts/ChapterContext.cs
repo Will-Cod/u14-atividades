@@ -19,7 +19,7 @@ namespace Chapter.Contexts
             if (!optionsBuilder.IsConfigured)//Se optionsBuilder não estiver configurado (!)
             {
                 //cada provedor tem sua sintaxe para especificação
-                optionsBuilder.UseSqlServer("Data Source = DESKTOP-B600JJD\\SQLEXPRESS; initial catalog = Chapter; Integrated Security = true");
+                optionsBuilder.UseSqlServer("Data Source = DESKTOP-B600JJD\\SQLEXPRESS; initial catalog = Chapte; User id = sa; Password = Lolla9559@");
             }
         }
 

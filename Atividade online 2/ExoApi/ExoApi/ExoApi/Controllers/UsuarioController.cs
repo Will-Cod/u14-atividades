@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExoApi.Interfaces;
+using ExoApi.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Chapter.Interfaces;
-using Chapter.Models;
 
-namespace Chapter.Controllers
+namespace ExoApi.Controllers
 {
     [Produces("application/json")]
-
     [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
@@ -36,7 +35,7 @@ namespace Chapter.Controllers
             try
             {
                 Usuario usuarioEncontrado = _iUsuarioRepository.BuscarPorId(id);
-                if(usuarioEncontrado == null)
+                if (usuarioEncontrado == null)
                 {
                     return NotFound();
                 }
@@ -49,7 +48,7 @@ namespace Chapter.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar (Usuario usuario)
+        public IActionResult Cadastrar(Usuario usuario)
         {
             try
             {
@@ -68,7 +67,7 @@ namespace Chapter.Controllers
             try
             {
                 Usuario usuarioBuscado = _iUsuarioRepository.BuscarPorId(id);
-                if(usuarioBuscado == null)
+                if (usuarioBuscado == null)
                 {
                     return NotFound();
                 }
@@ -88,7 +87,7 @@ namespace Chapter.Controllers
             try
             {
                 Usuario usuarioBuscado = _iUsuarioRepository.BuscarPorId(id);
-                if(usuarioBuscado == null)
+                if (usuarioBuscado == null)
                 {
                     return NotFound();
                 }

@@ -19,9 +19,11 @@ namespace ExoApi.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source = DESKTOP-B600JJD\\SQLEXPRESS; initial catalog = dbExoApi; User Id = sa; Password = Lolla9559@");
+                optionsBuilder.UseSqlServer("Data Source = DESKTOP-B600JJD\\SQLEXPRESS; initial catalog = dbExoAPIBANCO; User Id = sa; Password = Lolla9559@");
             }
         }
         public DbSet<Projeto> Projetos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+
     }
 }

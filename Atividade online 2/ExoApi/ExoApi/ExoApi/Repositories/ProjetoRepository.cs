@@ -1,5 +1,6 @@
 ﻿using ExoApi.Contexts;
 using ExoApi.Models;
+using ExoApi.Interfaces;
 
 namespace ExoApi.Repositories
 {
